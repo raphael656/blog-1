@@ -20,11 +20,12 @@
                 <ul>
                     <li> <a href="{{ path('acceuil') }}">Acceuil</a></li>
                     <li> <a href="{{ path('contact') }}">Contact</a></li>
-                    <li> <a href="{{ path('contact', {email: "hellol@lerat.com"}) }}">contacter le rat</a></li>
+                    <li> <a href="{{ path('contact', {email: "hellol@lerat.com"}) }}">ajout d'article</a></li>
                     <li> <a href="{{ path('contact', {email: "hellol@lapoule.com"}) }}">contacter la poule</a></li>
                 </ul>
             </nav>
         </header>
+
         {% block body %}{% endblock %}
     </body>
 </html>

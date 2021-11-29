@@ -17,4 +17,13 @@
     {% endif %}
     <p>tu t'appelle {{ controller_name }}</p>
 </div>
+
+
+
+    {{ dump(contacts)}}
+
+    {% for Contact in contacts %}
+    <a href="{{ Contact.id }}"> {{ Contact.name }}</a>
+    {% endfor %}
+
 {% endblock %}

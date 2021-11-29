@@ -13,6 +13,6 @@ class CreerUnArticleController extends AbstractController
     {
         return $this->render('creer_un_article/index.html.twig', [
             'controller_name' => 'CreerUnArticleController',
-        ]);
+    ]);
     }
 }
