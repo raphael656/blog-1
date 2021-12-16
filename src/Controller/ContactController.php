@@ -2,16 +2,16 @@
 
 namespace App\Controller;
 
-use App\Repository\ContactRepository;
+use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ContactController extends AbstractController
 {
-    private ContactRepository $contactRepository;
+    private  $contactRepository;
 
-    public function __construct(ContactRepository $contactRepository)
+    public function __construct(ArticleRepository $contactRepository)
     {
         $this->contactRepository = $contactRepository;
     }

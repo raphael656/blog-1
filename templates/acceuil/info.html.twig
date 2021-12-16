@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AcceuilController!{% endblock %}
+{% block body %}
+
+<body class="example-wrapper">
+
+<img class="imj" src="{{ asset('images/boisson.png') }}" alt = "Symfony"/>
+<script src="{{ asset('bundles/acme/js/loader.js') }}"></script>
+</body>
+    <h3> Mon premier contact </h3>
+    <br>
+    <li> id : {{ info.id }}</li>
+    <li> Name : {{ info.name }}</li>
+    <li> Firstname : {{ info.firstname }}</li>
+    {% if info.newsletter == 1 %}
+    <li> newsletter : OK</li>
+    {% endif %}
+    {% if info.newsletter == 0 %}
+        <li> newsletter : No</li>
+    {% endif %}
+    <li> Age : {{ info.age }}</li>
+{% endblock %}

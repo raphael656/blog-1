@@ -3,11 +3,18 @@
 {% block title %}Hello AcceuilController!{% endblock %}
 {% block body %}
 
-<body class="example-wrapper">
+    <body class="example-wrapper">
 
-<img class="imj" src="{{ asset('images/boisson.png') }}" alt = "Symfony"/>
-<script src="{{ asset('bundles/acme/js/loader.js') }}"></script>
-</body>
+    <img class="imj" src="{{ asset('images/boisson.png') }}" alt="Symfony"/>
+    <script src="{{ asset('bundles/acme/js/loader.js') }}"></script>
+    </body>
 
     {{ form(form) }}
+
+    {% set number = tp | length %}
+    <h3> Le nombre de contact est de :{{ number }}</h3>
+    <br>
+    {% for Tp in tp %}
+        <li><a href="{{ path('tpinfo', {id: Tp.id}) }} "> {{ Tp.name }} {{ Tp.firstname }}</a></li>
+    {% endfor %}
 {% endblock %}
